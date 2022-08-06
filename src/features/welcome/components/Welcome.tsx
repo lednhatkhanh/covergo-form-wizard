@@ -1,25 +1,19 @@
-import Head from "next/head";
+import Link from "next/link";
 import * as React from "react";
-import { Button, Text } from "src/components";
+import { Button, Container, Text } from "src/components";
 
-const Welcome = () => {
+const Welcome: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Welcome</title>
-      </Head>
+    <Container>
+      <Text variant="title">Hello There!</Text>
+      <Text component="p">
+        Let&apos;s buy some insurance. It is going to take only a few steps
+      </Text>
 
-      <main>
-        <div className="bg-gray-100 p-12 flex flex-col gap-y-6 items-center mx-auto mt-32 w-[fit-content]">
-          <Text variant="title">Hello There!</Text>
-          <Text component="p">
-            Let&apos;s buy some insurance. It is going to take only a few steps
-          </Text>
-
-          <Button size="large">Start</Button>
-        </div>
-      </main>
-    </>
+      <Button size="large" component={Link} href="/form">
+        Start
+      </Button>
+    </Container>
   );
 };
 

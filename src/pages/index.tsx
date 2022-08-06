@@ -1,8 +1,11 @@
-import * as React from "react";
 import { Welcome } from "src/features/welcome";
 
 const WelcomePage = () => {
-  return <Welcome />;
+  return (
+    <main>
+      <Welcome />
+    </main>
+  );
 };
 
 export default WelcomePage;

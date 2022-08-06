@@ -1,9 +1,17 @@
 import { AppProps } from "next/app";
-import * as React from "react";
-import "src/styles/index.css";
+import Head from "next/head";
+import "src/styles/index.scss";
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>Buy Insurance</title>
+      </Head>
+
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 export default CustomApp;
