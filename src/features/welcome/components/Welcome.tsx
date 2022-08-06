@@ -1,18 +1,25 @@
+import Head from "next/head";
 import * as React from "react";
-import { Button } from "src/components/Button";
+import { Button, Text } from "src/components";
 
 const Welcome = () => {
   return (
-    <main>
-      <div className="bg-gray-100 p-12 flex flex-col gap-y-6 items-center mx-auto mt-32 w-[fit-content]">
-        <h1 className="text-4xl font-semibold">Hello There!</h1>
-        <div className="text-md">
-          Let&apos;s buy some insurance. It is going to take only a few steps
-        </div>
+    <>
+      <Head>
+        <title>Welcome</title>
+      </Head>
 
-        <Button size="large">Start</Button>
-      </div>
-    </main>
+      <main>
+        <div className="bg-gray-100 p-12 flex flex-col gap-y-6 items-center mx-auto mt-32 w-[fit-content]">
+          <Text variant="title">Hello There!</Text>
+          <Text component="p">
+            Let&apos;s buy some insurance. It is going to take only a few steps
+          </Text>
+
+          <Button size="large">Start</Button>
+        </div>
+      </main>
+    </>
   );
 };
 
